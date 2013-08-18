@@ -1,4 +1,4 @@
-package ws.temple.markovi.feeders;
+package ws.temple.markov.feeders;
 
 /*
  * Copyright (c) 2013, Brian Dixon
@@ -27,8 +27,8 @@ package ws.temple.markovi.feeders;
 
 import java.util.LinkedList;
 
-import ws.temple.markovi.MarkovChain;
-import ws.temple.markovi.Predictor;
+import ws.temple.markov.MarkovChain;
+import ws.temple.markov.Predictor;
 
 /**
  * Abstract class that provides some helpful functionality for
