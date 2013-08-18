@@ -1,4 +1,4 @@
-package ws.temple.markov.feeders;
+package ws.temple.markovi.feeders;
 
 /*
  * Copyright (c) 2013, Brian Dixon
@@ -30,7 +30,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-import ws.temple.markov.MarkovChain;
+import ws.temple.markovi.MarkovChain;
 
 /**
  * Reads a newline-separated list of names into a MarkovChain.

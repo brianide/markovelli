@@ -1,4 +1,4 @@
-package ws.temple.markov;
+package ws.temple.markovi;
 
 /*
  * Copyright (c) 2013, Brian Dixon
