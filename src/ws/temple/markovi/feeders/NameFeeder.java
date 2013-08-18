@@ -39,17 +39,49 @@ import ws.temple.markovi.MarkovChain;
  */
 public class NameFeeder extends SequentialFeeder<Character> {
 
+	/**
+	 * Constructs a NameFeeder instance feeding the specified MarkovChain.
+	 * 
+	 * @param chain
+	 */
 	public NameFeeder(MarkovChain<Character> chain) {
 		super(chain);
 	}
 
+	/**
+	 * Reads names from the specified InputStream.
+	 * 
+	 * @param is
+	 */
 	public void feed(InputStream is) throws IOException {
 		try(BufferedReader br = new BufferedReader(new InputStreamReader(is));) {
 			
 			String line;
 			while((line = br.readLine()) != null) {
+				
+				/* registerToken() adds a new entry in the MarkovChain
+				 * associating the previous tokens (as a Predictor)
+				 * with the token passed as an argument. The window
+				 * size is acquired from the MarkovChain automatically.
+				 *
+				 * As an analogy, if you were writing a Feeder for a
+				 * sentence generator, you would call this method on
+				 * each word in the source text.
+				 */
 				for(char c : line.toUpperCase().trim().toCharArray())
 					this.registerToken(c);
+				
+				/* endPath() associates the last set of tokens with
+				 * a null token, which means that generates sequences
+				 * may end after such a set. This method also prepares
+				 * the MarkovChain to register a predictor that can
+				 * begin a sequence.
+				 *
+				 * Referring again to the analogy of the text generator,
+				 * you would probably want to call this method at the
+				 * end of each sentence, or perhaps each independant
+				 * clause, in the source text.
+				 */
 				this.endPath();
 			}
 		}
