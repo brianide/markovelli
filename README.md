@@ -1,11 +1,11 @@
 About
 =====
-**Markovi** is a simple, generic implementation of Markov chains in Java.
+**Markovelli** is a simple, generic implementation of Markov chains in Java.
 
 
 Usage
 =====
-Tuples can be added directly to a MarkovChain object, but Markovi currently also provides an abstract
+Tuples can be added directly to a MarkovChain object, but Markovelli currently also provides an abstract
 Feeder class, as well as an example NameFeeder concrete class, which can be used to make the process
 substantially easier.
 
@@ -28,9 +28,9 @@ a Feeder.
 
 Contributions
 =============
-Markovi is incomplete, albeit usable enough in its present state for some purposes. Contributions
+Markovelli is incomplete, albeit usable enough in its present state for some purposes. Contributions
 are deeply appreciated.
 
-Markovi is provided under the **BSD 2-Clause License**, which means you're free to do pretty much
+Markovelli is provided under the **BSD 2-Clause License**, which means you're free to do pretty much
 whatever you like with it with minimal obligations. If you happen to improve or expand upon it in a
 way that's generally useful or helpful, though, it'd be nice of you to consider sharing.
