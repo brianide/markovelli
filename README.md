@@ -12,7 +12,7 @@ substantially easier.
 The following example, a simple name generator, will print ten names based on a newline-separated list of
 source names, *names.txt:*
 	
-	/* Instiatate a MarkovChain and feed it some source names */
+	/* Instantiate a MarkovChain and feed it some source names */
 	MarkovChain<Character> nameGenerator = new MarkovChain<>(3);
 	InputStream names = Utils.getResourceAsStream("names.txt");
 	new NameFeeder(nameGenerator).feed(names);
